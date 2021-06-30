@@ -12,8 +12,16 @@ public class ArrTask3 {
         Random rnd = new Random();
         int [] arrRandom = new int [15];
         for (int i=0; i<15;i++) {
-            arrRandom [i]=rnd.nextInt(99);
+            arrRandom [i]=rnd.nextInt(100);
             System.out.print(arrRandom [i] + " ");
         }
+        int j = 0;
+        for (int i =0; i <= arrRandom.length-1 ; i++) {
+            if (arrRandom[i]% 2 == 0) {
+                j++;
+            }
+            }
+        System.out.println ();
+        System.out.print(j + " ");
     }
 }
