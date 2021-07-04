@@ -19,9 +19,9 @@ public class ArrTask7 {
         int max = arrRandom[0];
         int index = 0;
         for (int i = 0; i < arrRandom.length; i++) {
-            if (arrRandom[i] > max) {
+            if (arrRandom[i] >= max) {
                 max = arrRandom[i];
-                index = i;
+                index =i;
             }
         }System.out.println(max);
         System.out.println(index);
