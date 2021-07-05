@@ -16,16 +16,16 @@ public class ArrTask9 {
     public static void main(String args[]) {
         System.out.println("Введите положительное чётное целое число:");
         Scanner scan = new Scanner(System.in);
-        int number = 0;
+        double number =0;
         do {
-            number = scan.nextInt();
-            if (number % 2 != 0 || number < 1)
+            number = scan.nextDouble();
+            if (number % 2 != 0 || number < 1 || number % 1 != 0)
                 System.out.println("некорректный ввод, введите чётное целое число!");
         }
-        while (number % 2 != 0 || number < 1);
+        while (number % 2 != 0 || number < 1 || number % 1 != 0);
 
         Random rnd = new Random();
-        int[] arrRandom = new int[number];
+        int[] arrRandom = new int[ (int) number];
         for (int i = 0; i < arrRandom.length; i++) {
             arrRandom[i] = rnd.nextInt(15) + 1;
             System.out.print(arrRandom[i] + " ");
@@ -35,16 +35,16 @@ public class ArrTask9 {
         for (int l = 0; l < arrRandom.length / 2; l++) {
             sumLeft += arrRandom[l];
         }
-        for (int r = arrRandom.length/2; r < arrRandom.length; r++) {
+        for (int r = arrRandom.length / 2; r < arrRandom.length; r++) {
             sumRight += arrRandom[r];
         }
         System.out.println();
-        if (sumLeft>sumRight) {
-            System.out.println("Сумма левой половины массыва: " +sumLeft+ " больше суммы правой половины массива: " +sumRight);
-        } else if (sumLeft<sumRight) {
-            System.out.println("Сумма левой половины массыва: " +sumLeft+ " меньше суммы правой половины массива: " +sumRight);
+        if (sumLeft > sumRight) {
+            System.out.println("Сумма левой половины массыва: " + sumLeft + " больше суммы правой половины массива: " + sumRight);
+        } else if (sumLeft < sumRight) {
+            System.out.println("Сумма левой половины массыва: " + sumLeft + " меньше суммы правой половины массива: " + sumRight);
         } else {
-            System.out.println("Сумма левой половины массыва: " +sumLeft+ " ровна сумме правой половины массива: " +sumRight);
+            System.out.println("Сумма левой половины массыва: " + sumLeft + " ровна сумме правой половины массива: " + sumRight);
         }
     }
 }

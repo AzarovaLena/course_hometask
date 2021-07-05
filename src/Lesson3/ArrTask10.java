@@ -16,18 +16,18 @@ public class ArrTask10 {
     public static void main(String args[]) {
         System.out.println("Введите целое число больше 3:");
         Scanner scan = new Scanner(System.in);
-        int n = 0;
+        double n = 0;
         int even = 0;
         do {
-            n = scan.nextInt();
-            if (n <= 3)
+            n = scan.nextDouble();
+            if (n <= 3 || n%1 !=0)
                 System.out.println("некорректный ввод, введите целое число больше 3!");
         }
-        while (n <= 3);
-        int[] arrRandom = new int[n];
+        while (n <= 3 || n%1 !=0);
+        int[] arrRandom = new int[ (int) n];
         Random rnd = new Random();
         for (int i = 0; i < arrRandom.length; i++) {
-            arrRandom[i] = rnd.nextInt(n) + 1;
+            arrRandom[i] = rnd.nextInt( (int) n) + 1;
             if (arrRandom[i] % 2 == 0) {
                 even++;
             }
