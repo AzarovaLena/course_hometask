@@ -10,7 +10,10 @@ public class Main {
         lena.fullCycleLife = 5;
 
         lena.description();
-        for (int i = lena.fullCycleLife; i > 0; i--) {
+        lena.turnON();
+        lena.turnOFF();
+
+        for (int i = lena.fullCycleLife; i >0; i--) {
             lena.turnON();
         }
 

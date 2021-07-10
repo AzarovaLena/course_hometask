@@ -22,15 +22,18 @@ public class Сomputer {
         Random rnd1 = new Random();
         int nr = rnd1.nextInt(1) + 1;
         int attempt = 0;
+
         System.out.println("При включении может произойти сбой! Введите число 0 или 1");
         Scanner scan1 = new Scanner(System.in);
         int number1 = scan1.nextInt();
         if (nr == number1) {
             System.out.println("Всё отлично, компьютер включается. Привет!");
         } else {
-            System.out.printf("Вы ошиблись, компьютер сгорит через \"%s\" попыток!", --this.fullCycleLife);
+
+            System.out.printf("Вы ошиблись, компьютер сгорел");
             System.out.println();
         }
+        this.fullCycleLife--;
         if (this.fullCycleLife == 0) {
             System.out.println("Компьютеру конец, его не вернуть!");
 
@@ -39,26 +42,25 @@ public class Сomputer {
 
     public void turnOFF() {
 
-        Random rnd2 = new Random();
-        int nr2 = rnd2.nextInt(1) + 1;
+        Random rnd1 = new Random();
+        int nr = rnd1.nextInt(1) + 1;
+        int attempt = 0;
 
         System.out.println("При вылючении может произойти сбой! Введите число 0 или 1");
-        Scanner scan3 = new Scanner(System.in);
-        int number3 = scan3.nextInt();
-
-        if (nr2 == number3) {
-            System.out.println("Всё отлично, компьютер выключается! До свидания!");
-
+        Scanner scan1 = new Scanner(System.in);
+        int number1 = scan1.nextInt();
+        if (nr == number1) {
+            System.out.println("Всё отлично, компьютер включается. Привет!");
         } else {
-            System.out.printf("Вы ошиблись, компьютер сгорит через \"%s\" попыток!", --this.fullCycleLife);
+
+            System.out.printf("Вы ошиблись, компьютер сгорел");
             System.out.println();
         }
+        this.fullCycleLife--;
         if (this.fullCycleLife == 0) {
             System.out.println("Компьютеру конец, его не вернуть!");
         }
     }
-
-
 }
 
 
