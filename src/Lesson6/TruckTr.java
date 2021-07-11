@@ -19,4 +19,12 @@ public class TruckTr extends LandTr {
         super.display();
         System.out.println("Грузоподъёмность " + this.loadLifting + " т");
     }
+    double load;
+    public void realLoad (double load) {
+        if (load<=loadLifting) {
+            System.out.println("Грузовик загружен");
+        } else {
+            System.out.println("Вам нужен грузовик побольше");
+        }
+    }
 }

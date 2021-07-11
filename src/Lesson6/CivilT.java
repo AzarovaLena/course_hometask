@@ -21,4 +21,13 @@ public class CivilT extends AirTr{
         System.out.print("Количество пассажиров " + this.passengersC + "шт., ");
         System.out.println("Наличие бизнес класса " + this.BClass);
     }
+
+    double quantityPas;
+    public void realPassengers (double quantityPas) {
+        if (quantityPas<=passengersC) {
+            System.out.println("Самалёт загружен");
+        } else {
+            System.out.println("Вам нужен самалёт побольше");
+        }
+    }
 }
